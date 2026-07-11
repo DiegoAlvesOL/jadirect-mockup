@@ -31,6 +31,12 @@ const Router = {
     track: {
       render: () => Pages.track(),
     },
+    shipnow: {
+      render: () => Pages.shipnow(),
+    },
+    quote: {
+      render: () => Pages.quote(),
+    },
   },
 
   /**

@@ -1,0 +1,129 @@
+/**
+ * Purpose   : Get a Quote (mock shipping cost estimator) page styles
+ * Consumed by: Get a Quote page
+ * Layer     : Presentation — Page Styles
+ */
+
+/* INTRO BANNER */
+.quote-intro {
+    background: var(--teal);
+    padding: 56px 0;
+    text-align: center;
+}
+
+.quote-intro-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.quote-intro .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.quote-intro h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+    margin: 12px 0 16px;
+}
+
+.quote-intro p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+/* LAYOUT */
+.quote-layout {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 56px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+/* RESULT BLOCK */
+.quote-result {
+    display: none;
+    margin-top: 24px;
+    padding: 24px;
+    background: var(--teal-light);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.quote-result.visible {
+    display: block;
+}
+
+.quote-result-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-700);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.quote-result-price {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--teal-dark);
+    margin: 6px 0 4px;
+}
+
+.quote-result-transit {
+    font-size: 13px;
+    color: var(--gray-600);
+    margin-bottom: 20px;
+}
+
+.quote-result-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quote-result-note {
+    font-size: 11px;
+    color: var(--gray-600);
+    margin-top: 16px;
+}
+
+/* SECONDARY OUTLINE BUTTON (teal on white) */
+.btn-outline {
+    background: transparent;
+    color: var(--teal);
+    border: 1px solid var(--teal);
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Barlow', sans-serif;
+    padding: 13px 24px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-outline:hover {
+    background: var(--teal-light);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .quote-intro h1 {
+        font-size: 28px;
+    }
+
+    .quote-result-price {
+        font-size: 32px;
+    }
+}

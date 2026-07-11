@@ -17,10 +17,7 @@
 .hero-image-placeholder {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #b0c4c4 0%, #8aabab 40%, #6d9292 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: url('../../images/hero-delivery.png') center/cover no-repeat;
 }
 
 .hero-image-placeholder span {
@@ -47,23 +44,28 @@
   margin: 0 auto;
   padding: 60px 24px 120px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-content h1 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 48px;
+  font-size: 34px;
   font-weight: 800;
   color: #fff;
-  line-height: 1.1;
-  margin-bottom: 28px;
+  line-height: 1.15;
+  margin-bottom: 20px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  max-width: 520px;
+  max-width: 480px;
 }
 
 /* TRACK FORM */
 .track-form {
   display: flex;
-  max-width: 500px;
+  width: 100%;
+  max-width: 540px;
   box-shadow: var(--shadow-lg);
   border-radius: var(--radius);
   overflow: hidden;
@@ -113,51 +115,47 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  background: #fff;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  overflow: hidden;
-  border: 1px solid var(--gray-200);
 }
 
 .action-card {
   padding: 24px 28px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: 8px;
   cursor: pointer;
-  transition: background 0.2s;
-  border-right: 1px solid var(--gray-200);
-}
-
-.action-card:last-child {
-  border-right: none;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
 }
 
 .action-card:hover {
-  background: var(--teal-light);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+  transform: translateY(-6px);
 }
 
 .action-card.highlight {
   background: #fff;
-  border-top: 3px solid var(--teal);
 }
 
 .action-card .icon {
-  width: 36px;
-  height: 36px;
-  background: var(--teal-light);
-  border-radius: 8px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
   margin-bottom: 4px;
+  color: var(--teal);
 }
 
-.action-card.highlight .icon {
-  background: var(--teal);
+.action-card .icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
 }
 
 .action-card h3 {
@@ -187,17 +185,18 @@
   padding: 0 24px;
 }
 
+
 /* SERVICE BLOCK */
 .service-block {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.25fr 1fr;
+  align-items: center;
   gap: 0;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--gray-200);
 }
 
+/* Note: reverse mode not yet used anywhere. If used later, the negative
+   margin on .service-card below must be mirrored (margin-right instead
+   of margin-left) for the overlap to land on the correct side. */
 .service-block.reverse {
   direction: rtl;
 }
@@ -207,32 +206,25 @@
 }
 
 .service-image {
-  background: linear-gradient(135deg, #8aabab 0%, #5d8888 100%);
-  min-height: 340px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: url('../../images/warehouse-loading.png') center/cover no-repeat;
+  height: 380px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
   position: relative;
-}
-
-.service-image span {
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.6);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border: 1px dashed rgba(255, 255, 255, 0.4);
-  padding: 8px 16px;
-  border-radius: 4px;
 }
 
 .service-card {
   background: #fff;
-  padding: 40px 44px;
+  padding: 32px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  margin-left: -30px;
+  position: relative;
+  z-index: 2;
 }
 
 .service-card .eyebrow {
@@ -412,6 +404,12 @@
 
   .service-block.reverse {
     direction: ltr;
+  }
+
+  .service-card {
+    margin-left: 0;
+    margin-top: -40px;
+    margin-inline: 16px;
   }
 
   .teal-banner .inner {

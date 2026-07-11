@@ -14,9 +14,7 @@ const Pages = {
       ${Components.navbar()}
 
       <section class="hero">
-        <div class="hero-image-placeholder">
-          <span>Image – JADirect Fleet in Action · Dublin Ireland</span>
-        </div>
+        <div class="hero-image-placeholder"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <h1>Your Shipment, Our Responsibility</h1>
@@ -29,18 +27,24 @@ const Pages = {
 
       <div class="action-cards-wrap">
         <div class="action-cards">
-          <div class="action-card">
-            <div class="icon">📦</div>
+          <div class="action-card" data-route="shipnow">
+            <div class="icon">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/><path d="M8 14l2.5 2.5L16 11"/></svg>
+            </div>
             <h3>Request Pickup</h3>
             <p>Schedule a pickup quickly and easily</p>
           </div>
-          <div class="action-card">
-            <div class="icon">💰</div>
+          <div class="action-card" data-route="quote">
+            <div class="icon">
+              <svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5"/><path d="M9 14l2 2 4-4"/></svg>
+            </div>
             <h3>Get a Quote</h3>
             <p>See the price in seconds</p>
           </div>
-          <div class="action-card highlight">
-            <div class="icon">📱</div>
+          <div class="action-card" data-route="signup">
+            <div class="icon">
+              <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+            </div>
             <h3>Create Account</h3>
             <p>Manage all your shipments in one place</p>
           </div>
@@ -50,9 +54,7 @@ const Pages = {
       <section class="section" style="padding-top: 96px;">
         <div class="section-inner">
           <div class="service-block">
-            <div class="service-image">
-              <span>Image – Warehouse in Dublin</span>
-            </div>
+            <div class="service-image"></div>
             <div class="service-card">
               <span class="eyebrow">Premium Services</span>
               <h2>Reliable Logistics</h2>
@@ -85,6 +87,263 @@ const Pages = {
 
       ${Components.footer()}
     `;
+  },
+
+
+  /**
+   * Ship Now page - single, non-recurring shipment within Ireland
+   */
+  shipnow() {
+    return `
+    ${Components.utilityBar()}
+    ${Components.navbar()}
+
+    <section class="shipnow-intro">
+      <div class="shipnow-intro-inner">
+        <a href="#" data-route="landing" class="page-back-link">← Back to Home</a>
+        <span class="eyebrow">One-Time Shipment</span>
+        <h1>Request a Pickup for a Single Item</h1>
+        <p>Send one parcel, anywhere in Ireland, without creating a business account or committing to a shipping contract. Ideal for gifts, personal items, or the occasional delivery.</p>
+      </div>
+    </section>
+
+    <div class="shipnow-layout">
+      <div class="shipnow-content">
+        <div class="info-block">
+          <h2>Who is this for?</h2>
+          <p>This service is designed for one-time, non-recurring shipments, a single item collected once and delivered once. If you ship regularly or need to manage multiple deliveries, <a href="#" data-route="signup">create a free account</a> instead to access our full customer portal.</p>
+          <ul class="who-list">
+            <li>Sending a gift to family or friends across Ireland</li>
+            <li>Returning a personal item to a seller</li>
+            <li>A single pickup with no ongoing shipping needs</li>
+            <li>Occasional shippers who don't need a business account</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h2>How it works</h2>
+          <ol class="steps-list">
+            <li><strong>Fill in the details.</strong> Tell us where to collect the item and where it should be delivered.</li>
+            <li><strong>Choose a time.</strong> Pick a preferred date and time slot for pickup.</li>
+            <li><strong>We collect and deliver.</strong> Our driver picks up your item and delivers it, fully tracked, anywhere in Ireland.</li>
+            <li><strong>Track your delivery.</strong> Create a quick account to follow your shipment from pickup to delivery.</li>
+          </ol>
+        </div>
+
+        <div class="info-block">
+          <h2>Why ship with JADirect</h2>
+          <div class="advantages-list">
+            <div class="advantage-item">
+              <span class="advantage-dot"></span>
+              <div>
+                <h4>No Account Needed</h4>
+                <p>Request a pickup right away, no business contract required.</p>
+              </div>
+            </div>
+            <div class="advantage-item">
+              <span class="advantage-dot"></span>
+              <div>
+                <h4>Ireland-Wide Coverage</h4>
+                <p>Reliable pickup and delivery to any address in Ireland.</p>
+              </div>
+            </div>
+            <div class="advantage-item">
+              <span class="advantage-dot"></span>
+              <div>
+                <h4>Reliable Tracking</h4>
+                <p>Follow your shipment from pickup to delivery, even for one-time orders.</p>
+              </div>
+            </div>
+            <div class="advantage-item">
+              <span class="advantage-dot"></span>
+              <div>
+                <h4>Great for Occasional Use</h4>
+                <p>Ideal for gifts, personal items, or returns, no volume requirement.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shipnow-form-wrap">
+        <div class="form-section shipnow-form-card">
+          <h2>Pickup Details</h2>
+          <form id="shipnow-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Pickup Location</label>
+                <input type="text" placeholder="Street, city">
+              </div>
+              <div class="form-group">
+                <label>Delivery Location</label>
+                <input type="text" placeholder="Street, city">
+              </div>
+            </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Preferred Date</label>
+                  <input type="date">
+                </div>
+                <div class="form-group">
+                  <label>Time Slot</label>
+                  <select>
+                    <option>08:00 - 12:00</option>
+                    <option>12:00 - 16:00</option>
+                    <option>16:00 - 20:00</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="form-group full">
+                <label>Estimated Weight</label>
+                <input type="text" placeholder="e.g. 5 kg">
+              </div>
+              
+              <div class="form-group full">
+                <label>Item Description</label>
+                <textarea placeholder="What are you sending? e.g. small box, fragile"></textarea>
+              </div>
+
+            <button type="submit" class="btn-primary full-width">Request Pickup</button>
+          </form>
+          <p class="shipnow-form-note">You'll be asked to create a quick account after submitting, so you can track this delivery.</p>
+        </div>
+      </div>
+    </div>
+
+    ${Components.footer()}
+
+    <script>
+      document.getElementById('shipnow-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        Router.navigate('signup');
+      });
+    </script>
+  `;
+  },
+
+  /**
+   * Calculates a mock shipping estimate based on weight.
+   * This is a fictitious calculation for mockup purposes only,
+   * it does not reflect real JADirect pricing.
+   *
+   * @param {number} weightKg - Estimated weight in kilograms.
+   * @returns {{price: string, transitTime: string}} Mock estimate.
+   */
+  calculateMockQuote(weightKg) {
+    const baseRate = 8;
+    const perKgRate = 1.35;
+    const safeWeight = Number.isFinite(weightKg) && weightKg > 0 ? weightKg : 1;
+    const price = (baseRate + safeWeight * perKgRate).toFixed(2);
+    const transitTime = safeWeight > 20 ? '2-3 business days' : '1-2 business days';
+
+    return { price, transitTime };
+  },
+
+  /**
+   * Get a Quote page - mock shipping cost estimator
+   */
+  quote() {
+    return `
+    ${Components.utilityBar()}
+    ${Components.navbar()}
+
+    <section class="quote-intro">
+      <div class="quote-intro-inner">
+        <a href="#" data-route="landing" class="page-back-link">← Back to Home</a>
+        <span class="eyebrow">Instant Estimate</span>
+        <h1>See the Price in Seconds</h1>
+        <p>Get an instant shipping estimate for a single item, anywhere in Ireland. No account needed to check the price.</p>
+      </div>
+    </section>
+
+    <div class="quote-layout">
+      <div class="form-section">
+        <h2>Shipment Details</h2>
+        <form id="quote-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>From</label>
+              <input type="text" id="quote-origin" placeholder="Origin city or Eircode">
+            </div>
+            <div class="form-group">
+              <label>To</label>
+              <input type="text" id="quote-destination" placeholder="Destination city or Eircode">
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label>Estimated Weight (kg)</label>
+            <input type="text" id="quote-weight" placeholder="e.g. 5">
+          </div>
+
+          <button type="submit" class="btn-primary full-width">Calculate Estimate</button>
+        </form>
+
+        <div class="quote-result" id="quote-result">
+          <div class="quote-result-label">Estimated Price</div>
+          <div class="quote-result-price" id="quote-result-price">€ 0.00</div>
+          <div class="quote-result-transit" id="quote-result-transit">Estimated transit time</div>
+          <div class="quote-result-actions">
+            <button class="btn-primary" data-route="shipnow">Request This Pickup</button>
+            <button class="btn-outline" data-route="signup">Create Account</button>
+          </div>
+          <p class="quote-result-note">This is an estimated price for a one-time shipment. Final cost may vary based on exact dimensions and address.</p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <h2>What affects your shipping cost</h2>
+        <div class="advantages-list">
+          <div class="advantage-item">
+            <span class="advantage-dot"></span>
+            <div>
+              <h4>Weight</h4>
+              <p>Heavier items cost more to collect and deliver.</p>
+            </div>
+          </div>
+          <div class="advantage-item">
+            <span class="advantage-dot"></span>
+            <div>
+              <h4>Distance</h4>
+              <p>Longer routes within Ireland may affect transit time.</p>
+            </div>
+          </div>
+          <div class="advantage-item">
+            <span class="advantage-dot"></span>
+            <div>
+              <h4>Pickup Speed</h4>
+              <p>Same-day or next-day pickup requests may cost more.</p>
+            </div>
+          </div>
+          <div class="advantage-item">
+            <span class="advantage-dot"></span>
+            <div>
+              <h4>Item Type</h4>
+              <p>Fragile or oversized items may require special handling.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    ${Components.footer()}
+
+    <script>
+      document.getElementById('quote-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const weightInput = document.getElementById('quote-weight').value;
+        const weightKg = parseFloat(weightInput);
+        const estimate = Pages.calculateMockQuote(weightKg);
+
+        document.getElementById('quote-result-price').textContent = '€ ' + estimate.price;
+        document.getElementById('quote-result-transit').textContent = 'Estimated transit time: ' + estimate.transitTime;
+        document.getElementById('quote-result').classList.add('visible');
+      });
+    </script>
+  `;
   },
 
   /**

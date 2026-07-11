@@ -29,7 +29,7 @@ const Components = {
     return `
       <nav class="navbar">
         <div class="container">
-          <div class="navbar-logo">
+          <div class="navbar-logo" data-route="landing" style="cursor: pointer;">
             <img src="assets/images/logo-white.png" alt="JADirect Logo" class="logo-img">
           </div>
           <ul class="nav-links">
@@ -60,13 +60,16 @@ const Components = {
           <div class="footer-grid">
             <div class="footer-col">
               <h4>Quick Links</h4>
-              <ul>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Customer Portal</a></li>
-                <li><a href="#">Get Quote</a></li>
-                <li><a href="#">Business Account</a></li>
-                <li><a href="#">Track Shipment</a></li>
-              </ul>
+                <div class="footer-col">
+                  <h4>Quick Links</h4>
+                  <ul>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#" data-route="portal">Customer Portal</a></li>
+                    <li><a href="#" data-route="quote">Get Quote</a></li>
+                    <li><a href="#" data-route="signup">Business Account</a></li>
+                    <li><a href="#" data-route="track">Track Shipment</a></li>
+                  </ul>
+                </div>
             </div>
             <div class="footer-col">
               <h4>Our Services</h4>
