@@ -72,23 +72,93 @@ const Pages = {
         </div>
       </section>
 
-      <div class="teal-banner">
-        <div class="inner">
-          <div class="teal-banner-image">
-            <span>Image</span>
+      <section class="stats-carousel-section">
+        <div class="stats-carousel-track">
+          <div class="stat-card">
+            <div class="stat-card-visual number">93</div>
+            <div class="stat-card-info">
+              <div class="stat-card-label">93 Deliveries Completed Every Day</div>
+              <p class="stat-card-text">Consistent, on-time performance across Ireland is what keeps our clients coming back every day.</p>
+            </div>
           </div>
-          <div>
-            <h3>Ready to Ship?</h3>
-            <p>Create your account now and start managing your shipments. It's quick, easy and secure.</p>
+          <div class="stat-card">
+            <div class="stat-card-visual number">56</div>
+            <div class="stat-card-info">
+              <div class="stat-card-label">56 Pickups Scheduled Every Day</div>
+              <p class="stat-card-text">Fast scheduling and reliable collection windows make JADirect the trusted choice for daily pickups.</p>
+            </div>
           </div>
-          <button class="btn-outline-white" data-route="signup">Create Free Account</button>
+          <div class="stat-card">
+            <div class="stat-card-visual">
+              <svg viewBox="0 0 24 24"><rect x="2" y="8" width="13" height="9" rx="1"/><path d="M15 11h3l3 3v3h-6z"/><circle cx="6" cy="19" r="1.3"/><circle cx="16.5" cy="19" r="1.3"/></svg>
+            </div>
+            <div class="stat-card-info">
+              <div class="stat-card-label">Built for the City</div>
+              <p class="stat-card-text">Agile vans built for tight urban routes, reaching addresses where larger trucks can't go.</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-visual">
+              <svg viewBox="0 0 24 24"><rect x="1" y="6" width="15" height="10" rx="1"/><path d="M16 9h4l3 4v3h-7z"/><circle cx="6" cy="19" r="1.5"/><circle cx="18" cy="19" r="1.5"/></svg>
+            </div>
+            <div class="stat-card-info">
+              <div class="stat-card-label">Built for the Road Between Cities</div>
+              <p class="stat-card-text">Rigid trucks connecting cities across Ireland, built for large-volume cargo.</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-visual client">FedEx</div>
+            <div class="stat-card-info">
+              <div class="stat-card-label">Trusted by FedEx Ireland</div>
+              <p class="stat-card-text">Proud to support FedEx Ireland with dependable last-mile logistics.</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-visual number">93</div>
+            <div class="stat-card-info">
+              <div class="stat-card-label">93 Deliveries Completed Every Day</div>
+              <p class="stat-card-text">Consistent, on-time performance across Ireland is what keeps our clients coming back every day.</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-visual number">56</div>
+            <div class="stat-card-info">
+              <div class="stat-card-label">56 Pickups Scheduled Every Day</div>
+              <p class="stat-card-text">Fast scheduling and reliable collection windows make JADirect the trusted choice for daily pickups.</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-visual">
+              <svg viewBox="0 0 24 24"><rect x="2" y="8" width="13" height="9" rx="1"/><path d="M15 11h3l3 3v3h-6z"/><circle cx="6" cy="19" r="1.3"/><circle cx="16.5" cy="19" r="1.3"/></svg>
+            </div>
+            <div class="stat-card-info">
+              <div class="stat-card-label">Built for the City</div>
+              <p class="stat-card-text">Agile vans built for tight urban routes, reaching addresses where larger trucks can't go.</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-visual">
+              <svg viewBox="0 0 24 24"><rect x="1" y="6" width="15" height="10" rx="1"/><path d="M16 9h4l3 4v3h-7z"/><circle cx="6" cy="19" r="1.5"/><circle cx="18" cy="19" r="1.5"/></svg>
+            </div>
+            <div class="stat-card-info">
+              <div class="stat-card-label">Built for the Road Between Cities</div>
+              <p class="stat-card-text">Rigid trucks connecting cities across Ireland, built for large-volume cargo.</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-visual client">FedEx</div>
+            <div class="stat-card-info">
+              <div class="stat-card-label">Trusted by FedEx Ireland</div>
+              <p class="stat-card-text">Proud to support FedEx Ireland with dependable last-mile logistics.</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       ${Components.footer()}
     `;
   },
-
 
   /**
    * Ship Now page - single, non-recurring shipment within Ireland
@@ -180,30 +250,30 @@ const Pages = {
               </div>
             </div>
 
-              <div class="form-row">
-                <div class="form-group">
-                  <label>Preferred Date</label>
-                  <input type="date">
-                </div>
-                <div class="form-group">
-                  <label>Time Slot</label>
-                  <select>
-                    <option>08:00 - 12:00</option>
-                    <option>12:00 - 16:00</option>
-                    <option>16:00 - 20:00</option>
-                  </select>
-                </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Preferred Date</label>
+                <input type="date">
               </div>
-              
-              <div class="form-group full">
-                <label>Estimated Weight</label>
-                <input type="text" placeholder="e.g. 5 kg">
+              <div class="form-group">
+                <label>Time Slot</label>
+                <select>
+                  <option>08:00 - 12:00</option>
+                  <option>12:00 - 16:00</option>
+                  <option>16:00 - 20:00</option>
+                </select>
               </div>
-              
-              <div class="form-group full">
-                <label>Item Description</label>
-                <textarea placeholder="What are you sending? e.g. small box, fragile"></textarea>
-              </div>
+            </div>
+
+            <div class="form-group full">
+              <label>Estimated Weight</label>
+              <input type="text" placeholder="e.g. 5 kg">
+            </div>
+
+            <div class="form-group full">
+              <label>Item Description</label>
+              <textarea placeholder="What are you sending? e.g. small box, fragile"></textarea>
+            </div>
 
             <button type="submit" class="btn-primary full-width">Request Pickup</button>
           </form>
@@ -652,7 +722,7 @@ const Pages = {
           <div class="track-result">
             <h2>ORD-2026-05-002</h2>
             <p>${mockData.shipments[1].origin} → ${mockData.shipments[1].destination}</p>
-            
+
             <div class="timeline">
               ${mockData.trackingTimeline.map((item, idx) => `
                 <div class="timeline-item ${item.status}">

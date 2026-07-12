@@ -7,19 +7,10 @@
 const Components = {
   /**
    * Utility bar at the top
+   * Currently disabled, returns empty markup.
    */
   utilityBar() {
-    return `
-      <div class="utility-bar">
-        <div class="container">
-          <a href="#">📍 Find Service Point</a>
-          <span class="divider">|</span>
-          <a href="#">📞 +353 1 800 1000</a>
-          <span class="divider">|</span>
-          <a href="#">🌍 Ireland</a>
-        </div>
-      </div>
-    `;
+    return '';
   },
 
   /**
