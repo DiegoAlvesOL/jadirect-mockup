@@ -75,82 +75,86 @@ const Pages = {
       <section class="stats-carousel-section">
         <div class="stats-carousel-track">
           <div class="stat-card">
-            <div class="stat-card-visual number">93</div>
+            <div class="stat-card-visual number">
+              93
+              <span class="stat-card-visual-caption">avg/day</span>
+            </div>
             <div class="stat-card-info">
-              <div class="stat-card-label">93 Deliveries Completed Every Day</div>
-              <p class="stat-card-text">Consistent, on-time performance across Ireland is what keeps our clients coming back every day.</p>
+              <div class="stat-card-label">93 Deliveries. Every Single Day.</div>
+              <p class="stat-card-text">Reliability isn't a promise here, it's a routine.</p>
             </div>
           </div>
           <div class="stat-card">
-            <div class="stat-card-visual number">56</div>
+            <div class="stat-card-visual number">
+              56
+              <span class="stat-card-visual-caption">avg/day</span>
+            </div>
             <div class="stat-card-info">
-              <div class="stat-card-label">56 Pickups Scheduled Every Day</div>
-              <p class="stat-card-text">Fast scheduling and reliable collection windows make JADirect the trusted choice for daily pickups.</p>
+              <div class="stat-card-label">56 Pickups, Right on Time</div>
+              <p class="stat-card-text">Fast scheduling that keeps your business moving.</p>
             </div>
           </div>
           <div class="stat-card">
-            <div class="stat-card-visual">
-              <svg viewBox="0 0 24 24"><rect x="2" y="8" width="13" height="9" rx="1"/><path d="M15 11h3l3 3v3h-6z"/><circle cx="6" cy="19" r="1.3"/><circle cx="16.5" cy="19" r="1.3"/></svg>
-            </div>
+            <div class="stat-card-visual photo van"></div>
             <div class="stat-card-info">
-              <div class="stat-card-label">Built for the City</div>
-              <p class="stat-card-text">Agile vans built for tight urban routes, reaching addresses where larger trucks can't go.</p>
+              <div class="stat-card-label">Where Trucks Can't Go, We Do</div>
+              <p class="stat-card-text">Agile vans built for Ireland's tightest city streets.</p>
             </div>
           </div>
           <div class="stat-card">
-            <div class="stat-card-visual">
-              <svg viewBox="0 0 24 24"><rect x="1" y="6" width="15" height="10" rx="1"/><path d="M16 9h4l3 4v3h-7z"/><circle cx="6" cy="19" r="1.5"/><circle cx="18" cy="19" r="1.5"/></svg>
-            </div>
+            <div class="stat-card-visual photo truck"></div>
             <div class="stat-card-info">
-              <div class="stat-card-label">Built for the Road Between Cities</div>
-              <p class="stat-card-text">Rigid trucks connecting cities across Ireland, built for large-volume cargo.</p>
+              <div class="stat-card-label">Big Cargo, Longer Roads</div>
+              <p class="stat-card-text">Rigid trucks linking cities, built for scale.</p>
             </div>
           </div>
           <div class="stat-card">
             <div class="stat-card-visual client">FedEx</div>
             <div class="stat-card-info">
               <div class="stat-card-label">Trusted by FedEx Ireland</div>
-              <p class="stat-card-text">Proud to support FedEx Ireland with dependable last-mile logistics.</p>
+              <p class="stat-card-text">A partnership built on dependable last-mile delivery.</p>
             </div>
           </div>
 
           <div class="stat-card">
-            <div class="stat-card-visual number">93</div>
+            <div class="stat-card-visual number">
+              93
+              <span class="stat-card-visual-caption">avg/day</span>
+            </div>
             <div class="stat-card-info">
-              <div class="stat-card-label">93 Deliveries Completed Every Day</div>
-              <p class="stat-card-text">Consistent, on-time performance across Ireland is what keeps our clients coming back every day.</p>
+              <div class="stat-card-label">93 Deliveries. Every Single Day.</div>
+              <p class="stat-card-text">Reliability isn't a promise here, it's a routine.</p>
             </div>
           </div>
           <div class="stat-card">
-            <div class="stat-card-visual number">56</div>
+            <div class="stat-card-visual number">
+              56
+              <span class="stat-card-visual-caption">avg/day</span>
+            </div>
             <div class="stat-card-info">
-              <div class="stat-card-label">56 Pickups Scheduled Every Day</div>
-              <p class="stat-card-text">Fast scheduling and reliable collection windows make JADirect the trusted choice for daily pickups.</p>
+              <div class="stat-card-label">56 Pickups, Right on Time</div>
+              <p class="stat-card-text">Fast scheduling that keeps your business moving.</p>
             </div>
           </div>
           <div class="stat-card">
-            <div class="stat-card-visual">
-              <svg viewBox="0 0 24 24"><rect x="2" y="8" width="13" height="9" rx="1"/><path d="M15 11h3l3 3v3h-6z"/><circle cx="6" cy="19" r="1.3"/><circle cx="16.5" cy="19" r="1.3"/></svg>
-            </div>
+            <div class="stat-card-visual photo van"></div>
             <div class="stat-card-info">
-              <div class="stat-card-label">Built for the City</div>
-              <p class="stat-card-text">Agile vans built for tight urban routes, reaching addresses where larger trucks can't go.</p>
+              <div class="stat-card-label">Where Trucks Can't Go, We Do</div>
+              <p class="stat-card-text">Agile vans built for Ireland's tightest city streets.</p>
             </div>
           </div>
           <div class="stat-card">
-            <div class="stat-card-visual">
-              <svg viewBox="0 0 24 24"><rect x="1" y="6" width="15" height="10" rx="1"/><path d="M16 9h4l3 4v3h-7z"/><circle cx="6" cy="19" r="1.5"/><circle cx="18" cy="19" r="1.5"/></svg>
-            </div>
+            <div class="stat-card-visual photo truck"></div>
             <div class="stat-card-info">
-              <div class="stat-card-label">Built for the Road Between Cities</div>
-              <p class="stat-card-text">Rigid trucks connecting cities across Ireland, built for large-volume cargo.</p>
+              <div class="stat-card-label">Big Cargo, Longer Roads</div>
+              <p class="stat-card-text">Rigid trucks linking cities, built for scale.</p>
             </div>
           </div>
           <div class="stat-card">
             <div class="stat-card-visual client">FedEx</div>
             <div class="stat-card-info">
               <div class="stat-card-label">Trusted by FedEx Ireland</div>
-              <p class="stat-card-text">Proud to support FedEx Ireland with dependable last-mile logistics.</p>
+              <p class="stat-card-text">A partnership built on dependable last-mile delivery.</p>
             </div>
           </div>
         </div>

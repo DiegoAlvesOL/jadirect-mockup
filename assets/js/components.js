@@ -51,16 +51,13 @@ const Components = {
           <div class="footer-grid">
             <div class="footer-col">
               <h4>Quick Links</h4>
-                <div class="footer-col">
-                  <h4>Quick Links</h4>
-                  <ul>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#" data-route="portal">Customer Portal</a></li>
-                    <li><a href="#" data-route="quote">Get Quote</a></li>
-                    <li><a href="#" data-route="signup">Business Account</a></li>
-                    <li><a href="#" data-route="track">Track Shipment</a></li>
-                  </ul>
-                </div>
+              <ul>
+                <li><a href="#">Support</a></li>
+                <li><a href="#" data-route="portal">Customer Portal</a></li>
+                <li><a href="#" data-route="quote">Get Quote</a></li>
+                <li><a href="#" data-route="signup">Business Account</a></li>
+                <li><a href="#" data-route="track">Track Shipment</a></li>
+              </ul>
             </div>
             <div class="footer-col">
               <h4>Our Services</h4>
